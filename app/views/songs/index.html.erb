@@ -2,6 +2,8 @@
 
 <tbody>
 <% @songs.each do |song| %>
-  <tr> <%= link_to song.title, song_path(song) %> <tr>
+  <tr> 
+    <td> <%= link_to song.title, song_path(song) %> </td>
+  <tr>
 <% end %>
 </tbody>
