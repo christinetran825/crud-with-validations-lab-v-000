@@ -2,7 +2,7 @@
 
 <%= form_for @song do |f| %>
 
-  <% if @songs.errors.any? %>
+  <!-- <% if @songs.errors.any? %>
     <div id="error_explanation">
     <h2>
       <%= pluralize(@song.errors.count, "error") %>
@@ -14,7 +14,7 @@
       <% end %>
     </ul>
     </div>
-  <% end %>
+  <% end %> -->
 
   <p>Title: <%= f.text_field :title %></p><br>
   <p>Released: <%= f.text_field :released %></p><br>
