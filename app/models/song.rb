@@ -3,7 +3,7 @@ class Song < ActiveRecord::Base
   validates :artist_name, presence: true
 
   validates :title, uniqueness: { scope: :release_year, message: "must be unique per artist per year"}
-  validates :released, inclusion: { in: [true, false] }
+  validate :release_info
 
 
   def release_info
