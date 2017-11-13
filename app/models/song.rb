@@ -1,9 +1,10 @@
 class Song < ActiveRecord::Base
   validates :title, presence: true
-  validates :artist_name, presence: true
+
 
   validates :title, uniqueness: { scope: :release_year, message: "must be unique per artist per year"}
   validates :released, inclusion: { in: [true, false] }
+  validates :artist_name, presence: true
 
   # def release_info
   #   if self.released && !self.release_year
