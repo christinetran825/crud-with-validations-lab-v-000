@@ -4,8 +4,7 @@ class Song < ActiveRecord::Base
 
   validates :title, uniqueness: { scope: :release_year, message: "must be unique per artist per year"}
   validates :released, inclusion: { in: [true, false] }
-  validate :release_info
-
+  
   def release_info
     if self.released && !self.release_year
       errors.add(:release_year, "A Song needs a release year")
