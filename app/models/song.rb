@@ -1,6 +1,6 @@
 class Song < ActiveRecord::Base
   validates :title, presence: true
-  validates :title, uniqueness: { scope: [:release_year, :artist_name], message: "must be unique per artist per year"}
+  validates :title, uniqueness: { scope: [:release_year, :artist_name], message: "must be unique per artist per year" }
   validates :released, inclusion: { in: [true, false] }
   validates :artist_name, presence: true
 
